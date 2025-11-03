@@ -5,4 +5,11 @@ Author: Billy Bizilis
 ID: 110100110
 Username: bizvy001
 This is my own work as defined by the University's Academic Integrity Policy.
-''
+'''
+
+class Staff:
+    def __init__(self, first_name, last_name, email):
+        self.__first_name = first_name
+        self.__last_name = last_name
+        self.__email = email
+
