@@ -13,3 +13,20 @@ class Staff:
         self.__last_name = last_name
         self.__email = email
 
+
+    def add_staff(self):
+        pass
+
+    def feed_animal(self):
+        pass
+
+    def clean_enclosure(self):
+        pass
+
+    def health_check(self):
+        pass
+
+
+
+
+

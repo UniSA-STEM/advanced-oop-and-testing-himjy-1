@@ -1,11 +1,12 @@
 '''
 File: filename.py
-Description: 
+Description: animal file
 Author: Jamie Him
 ID: 110375225
 Username: himjy003
 This is my own work as defined by the University's Academic Integrity Policy."
-'''''
+'''
+
 
 class Animal:
     def __init__(self, name, species, age, diet):
@@ -14,12 +15,10 @@ class Animal:
         self.__age = age
         self.__diet = diet
 
-    def mammals(self):
+    def add_animal(self):
         pass
 
-    def reptite(self):
+    def remove_animal(self):
         pass
 
-    def bird(self):
-        pass
 
