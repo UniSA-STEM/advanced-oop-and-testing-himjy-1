@@ -1,13 +1,16 @@
-class Mammal:
-    def __init__(self, name, age):
-        self.__name = name
-        self.__age = age
+from animal import Animal
+
+class Mammal(Animal):
+    def __init__(self, name, species, age, diet):
+        super().__init__(name, species, age, diet)
 
     def sound(self):
-        pass
+        print("Mammal sound")
 
-    def eating(self):
-        pass
+    def eat(self):
+        print("Mammal eat")
 
-    def sleeping(self):
-        pass
+    def sleep(self):
+        print("Mammal sleep")
+
+        
