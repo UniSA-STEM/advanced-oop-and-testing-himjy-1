@@ -1,5 +1,5 @@
 '''
-File: filename.py
+File: animal.py
 Description: animal file
 Author: Jamie Him
 ID: 110375225
