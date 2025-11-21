@@ -14,6 +14,7 @@ class Animal(ABC):
         self.__species = species
         self.__age = age
         self.__diet = diet
+        self.__hunger = True
 
     @abstractmethod
     def sound(self):
@@ -32,6 +33,9 @@ class Animal(ABC):
     def sleep(self):
         pass
 
+    def feed(self):
+        self.__hunger = False
+
     def __str__(self):
         return self.__name
 
@@ -47,10 +51,14 @@ class Animal(ABC):
     def get_diet(self):
         return self.__diet
 
+    def get_hunger(self):
+        return self.__hunger
+
     animal_name = property(get_name)
     species = property(get_species)
     age = property(get_age)
     diet = property(get_diet)
+    hunger = property(get_hunger)
 
 
 
