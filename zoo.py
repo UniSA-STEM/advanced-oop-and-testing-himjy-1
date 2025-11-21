@@ -25,7 +25,6 @@ class Zoo:
             self.__animals.remove(animal)
             print(f"{animal} removed")
 
-
     def add_enclosure(self):
         pass
 
@@ -47,3 +46,7 @@ class Zoo:
     def generate_report(self):
         pass
 
+    def get_animals(self):
+        return self.__animals
+
+    zoo_animals = property(get_animals)

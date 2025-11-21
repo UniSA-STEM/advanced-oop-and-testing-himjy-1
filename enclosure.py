@@ -36,14 +36,10 @@ class Enclosure:
                     self.__animal.append(animal)
                     print("animal is bird")
 
-
-
-    def enclosure_type(self, enclosure):
-        pass
-
     def status(self):
         for animal in self.__animal:
             print(animal)
+            print(self.clean_level)
 
     def get_size(self):
         return self.__size
