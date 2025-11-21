@@ -12,6 +12,7 @@ from animal import Animal
 class Zoo:
     def __init__(self):
         self.__animals = []
+        self.__staff = []
 
     def add_animal(self, animal):
         isinstance(animal, Animal)
