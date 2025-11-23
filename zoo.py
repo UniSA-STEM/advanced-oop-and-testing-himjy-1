@@ -1,6 +1,6 @@
 '''
 File: zoo.py
-Description: main file.
+Description: Zoo (manages all animals, staff, enclosures)
 Author: Jamie Him
 ID: 110375225
 Username: himjy003

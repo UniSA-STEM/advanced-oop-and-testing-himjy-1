@@ -13,6 +13,7 @@ from mammals import Mammal
 from birds import Bird
 from reptiles import Reptile
 from enclosure import Enclosure
+from zookeeper import Zookeeper
 
 zoo = Zoo()
 zoo.add_animal('tiger')
@@ -24,9 +25,8 @@ bird1 = Bird("Parrot", "Macaw", 2, "Seeds")
 reptile1 = Reptile("Snake", "Python", 4, "Rodents")
 
 # add animal to enclosure
-mammal_enclosure = Enclosure('small', 'wetlands', 'clean', 'mammal')
-mammal_enclosure.add_animal(mammal1)
-mammal_enclosure.status()
 
 #zookeeper
-testing = zookeeper()
+zookeeper1 = Zookeeper('jamie','him', 'jj@gmail.com')
+print(zookeeper1)
+zookeeper1.add_animal(mammal1)

@@ -23,6 +23,9 @@ class Staff(ABC):
     def responsibility(self):
         pass
 
+    def __str__(self):
+        return (f"Staff: {self.__first_name} {self.__last_name}\n"
+                f"Email: {self.__email}")
 
 
 
