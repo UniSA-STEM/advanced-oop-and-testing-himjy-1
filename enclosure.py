@@ -41,6 +41,9 @@ class Enclosure:
             print(animal)
             print(self.clean_level)
 
+    def clean_enclosure(self):
+        self.__clean_level = environment.Clean_level.Clean
+
     def get_size(self):
         return self.__size
 
