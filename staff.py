@@ -8,7 +8,6 @@ This is my own work as defined by the University's Academic Integrity Policy.
 '''
 
 from abc import ABC, abstractmethod
-
 class Staff(ABC):
     def __init__(self, role, first_name, last_name, email):
         self.__role = role

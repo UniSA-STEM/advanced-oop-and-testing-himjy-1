@@ -1,7 +1,5 @@
-import environment
 from staff import Staff
 from environment import Clean_level
-from environment import Type
 
 class Zookeeper(Staff):
     def __init__(self, role, first_name, last_name, email):

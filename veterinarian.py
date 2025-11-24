@@ -14,7 +14,18 @@ class Veterinarian(Staff):
 
     def task(self):
         for animal in self.__assigned_animal:
-            pass
+            if animal.health < 50:
+                print(f"{animal} requires medical attention")
+            else:
+                print(f"{animal} is  Healthy")
+
+    def heal(self):
+        for animal in self.__assigned_animal:
+            if animal.health < 50:
+                animal.heal(100)
+                print(f"{animal} has received medical care and is fully restored")
+            else:
+                print(f"{animal} is healthy, does not require medical attention")
 
 
 

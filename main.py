@@ -83,3 +83,9 @@ print(f"---------\n")
 # veterinarian
 veterinarian1 = Veterinarian('veterinarian', 'james', 'him', '@gmail.com')
 print(veterinarian1)
+veterinarian1.add_animal(mammal1)
+veterinarian1.responsibility()
+
+mammal1.sick(51)
+veterinarian1.task()
+veterinarian1.heal()
