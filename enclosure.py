@@ -20,29 +20,44 @@ class Enclosure:
         self.__animal = []
 
     def add_animal(self, animal):
-        if isinstance(animal, self.animal_type):
-            if self.environment_type == environment.Type.Savannah:
-                if self.animal_type == mammals.Mammal:
-                    self.__animal.append(animal)
-                    print("animal is mammal")
+        if self.environment_type == environment.Type.Savannah:
+            if isinstance(animal, mammals.Mammal):
+                self.__animal.append(animal)
+                print(f"{animal} added to {environment.Type.Savannah.name} enclosure")
 
-            elif self.environment_type == environment.Type.Wetlands:
-                if self.animal_type == reptiles.Reptile:
-                    self.__animal.append(animal)
-                    print("animal is reptile")
+            else:
+                print(f"{animal} cannot be added to {environment.Type.Savannah.name} enclosure, only mammals")
 
-            elif self.environment_type == environment.Type.Rainforest:
-                if self.animal_type == birds.Bird:
-                    self.__animal.append(animal)
-                    print("animal is bird")
+        elif self.environment_type == environment.Type.Wetlands:
+            if isinstance(animal, reptiles.Reptile):
+                self.__animal.append(animal)
+                print(f"{animal} added to {environment.Type.Wetlands.name} enclosure")
+            else:
+                print(f"{animal} cannot be added to {environment.Type.Wetlands.name} enclosure, only reptiles")
+
+        elif self.environment_type == environment.Type.Rainforest:
+            if isinstance(animal, birds.Bird):
+                self.__animal.append(animal)
+                print(f"{animal} added to {environment.Type.Rainforest.name} enclosure")
+            else:
+                print(f"{animal} cannot be added to {environment.Type.Wetlands.name} enclosure, only birds")
 
     def status(self):
         for animal in self.__animal:
-            print(animal)
-            print(self.clean_level)
+            print(f"{animal} added to {self.environment_type.name} enclosure")
+            print(f"enclosure is {self.clean_level.name}")
 
     def clean_enclosure(self):
         self.__clean_level = environment.Clean_level.Clean
+
+    def __str__(self):
+        return (
+            f"ENCLOSURE\n"
+            f"Size: {self.size.name}\n"
+            f"Environment: {self.environment_type.name}\n"
+            f"Clean level: {self.clean_level.name}\n"
+            f"Animal type: {self.animal_type.__name__}\n"
+        )
 
     def get_size(self):
         return self.__size

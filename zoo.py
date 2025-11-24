@@ -6,28 +6,30 @@ ID: 110375225
 Username: himjy003
 This is my own work as defined by the University's Academic Integrity Policy.
 '''
-
+import animal
 from animal import Animal
 
 class Zoo:
     def __init__(self):
         self.__animals = []
         self.__staff = []
+        self.__enclosure = []
 
     def add_animal(self, animal):
         isinstance(animal, Animal)
         if animal not in self.__animals:
             self.__animals.append(animal)
-            print(f"{animal} added")
+            print(f"{animal} added to the zoo")
 
     def remove_animal(self, animal):
         isinstance(animal, Animal)
         if animal in self.__animals:
             self.__animals.remove(animal)
-            print(f"{animal} removed")
+            print(f"{animal} removed from the zoo")
 
-    def add_enclosure(self):
-        pass
+    def add_enclosure(self, enclosure):
+        if enclosure not in self.__enclosure:
+            self.__enclosure.append(enclosure)
 
     def remove_enclosure(self):
         pass
