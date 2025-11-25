@@ -36,7 +36,11 @@ class Animal(ABC):
 
     def sick(self, amount):
         self.__health -= amount
-        print(f"{self.animal_name} is sick: Health {self.__health}")
+        if self.__health <= 50:
+            print(f"{self.animal_name} Health: {self.__health}")
+
+        else:
+            print(f"{self.animal_name} Health: {self.__health}")
 
     def heal(self, amount):
         self.__health += amount

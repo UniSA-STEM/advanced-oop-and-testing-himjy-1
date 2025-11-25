@@ -14,7 +14,6 @@ class Type(Enum):
     Savannah = 2
     Wetlands = 3
 
-
 class Size(Enum):
     Small = 1
     Medium = 2

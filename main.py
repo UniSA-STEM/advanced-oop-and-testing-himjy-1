@@ -31,7 +31,13 @@ zoo.add_animal('tiger')
 zoo.remove_animal('tiger')
 print(f"---------\n")
 
+# animal sound
+mammal1.sound()
+bird1.sound()
+print("\n")
+
 # Create enclosures
+zoo.add_enclosure()
 
 # 1 — Mammal enclosure (Savannah)
 enclosure1 = Enclosure(
@@ -85,7 +91,6 @@ veterinarian1 = Veterinarian('veterinarian', 'james', 'him', '@gmail.com')
 print(veterinarian1)
 veterinarian1.add_animal(mammal1)
 veterinarian1.responsibility()
-
-mammal1.sick(51)
 veterinarian1.task()
+mammal1.sick(50)
 veterinarian1.heal()
