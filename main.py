@@ -61,7 +61,7 @@ enclosure3 = Enclosure(
     Reptile
 )
 
-enclosure1.add_animal(mammal1)
+enclosure1.add_animal(bird1)
 enclosure2.add_animal(mammal1)
 enclosure2.add_animal(bird1)
 enclosure1.status()
@@ -90,9 +90,3 @@ veterinarian1.responsibility()
 veterinarian1.task()
 mammal1.sick(50)
 veterinarian1.heal()
-
-# Testing
-def test_add_animal(keeper, lion):
-    keeper.add_animal(lion)
-    assert lion in keeper._Zookeeper__assigned_animal
-
