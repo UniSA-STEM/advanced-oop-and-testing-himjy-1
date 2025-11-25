@@ -1,6 +1,6 @@
 '''
 File: birds.py
-Description: main file.
+Description: Defines the Bird subclass of Animal.
 Author: Jamie Him
 ID: 110375225
 Username: himjy003
@@ -13,12 +13,28 @@ class Bird(Animal):
     def __init__(self, name, species, age, diet):
         super().__init__(name, species, age, diet)
 
+    """
+    Birds inherit shared attributes and behaviours from the Animal class.
+    This class implements the abstract methods defined in Animal:
+    - sound()
+    - eat()
+    - sleep()
+    """
+
     def sound(self):
-        print("bird sound")
+        """
+        Print the sound a bird makes.
+        """
+        print("Bird sound")
 
     def eat(self):
-        print("bird eat")
+        """
+        Print how the bird eats.
+        """
+        print("Bird is eating")
 
     def sleep(self):
-        print("bird sleep")
-
+        """
+        Print how the bird sleeps.
+        """
+        print("Bird is sleeping")

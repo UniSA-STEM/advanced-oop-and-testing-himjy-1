@@ -6,10 +6,7 @@ ID: 110375225
 Username: himjy003
 This is my own work as defined by the University's Academic Integrity Policy.
 '''
-import enclosure
 import environment
-import zookeeper
-from animal import Animal
 from veterinarian import Veterinarian
 from zoo import Zoo
 from mammals import Mammal
@@ -23,6 +20,10 @@ mammal1 = Mammal("Lion", "Panthera leo", 5, "Meat")
 bird1 = Bird("Parrot", "Macaw", 2, "Seeds")
 reptile1 = Reptile("Snake", "Python", 4, "Rodents")
 
+# Staff
+zookeeper1 = Zookeeper('zookeeper','jamie', 'himmy', '@hotmail.com')
+veterinarian1 = Veterinarian('veterinarian', 'james', 'him', '@gmail.com')
+
 
 #Zoo
 print("WELCOME TO THE ZOO\n")
@@ -35,9 +36,6 @@ print(f"---------\n")
 mammal1.sound()
 bird1.sound()
 print("\n")
-
-# Create enclosures
-zoo.add_enclosure()
 
 # 1 — Mammal enclosure (Savannah)
 enclosure1 = Enclosure(
@@ -74,7 +72,6 @@ print(enclosure1)
 
 # zookeeper
 print(f"\n---------")
-zookeeper1 = Zookeeper('zookeeper','jamie', 'himmy', '@hotmail.com')
 print(zookeeper1)
 zookeeper1.add_animal(mammal1)
 zookeeper1.responsibility()
@@ -87,10 +84,15 @@ zookeeper1.clean()
 print(f"---------\n")
 
 # veterinarian
-veterinarian1 = Veterinarian('veterinarian', 'james', 'him', '@gmail.com')
 print(veterinarian1)
 veterinarian1.add_animal(mammal1)
 veterinarian1.responsibility()
 veterinarian1.task()
 mammal1.sick(50)
 veterinarian1.heal()
+
+# Testing
+def test_add_animal(keeper, lion):
+    keeper.add_animal(lion)
+    assert lion in keeper._Zookeeper__assigned_animal
+
